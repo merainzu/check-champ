@@ -18,4 +18,3 @@ allIndicator.forEach(item=> {
     this.classList.add('active');
   })
 })
-aw
