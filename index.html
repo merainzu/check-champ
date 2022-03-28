@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/phosphor-icons"></script>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<script src="raw.githubusercontent.com/merainzu/check-champ/main/renzsu.js"></script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--white: #FFF;
+	--blue: #562BF7;
+	--light: #F5F5F5;
+	--light-blue: #F3F0FF;
+	--grey: #eee;
+	--dark-grey: #666;
+	--black: #222;
+}
+
+body {
+	background: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 1rem;
+}
+
+.container {
+	max-width: 600px;
+	width: 100%;
+	background: var(--white);
+	border-radius: 10px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, .05);
+}
+.wrapper {
+	display: flex;
+}
+.indicator {
+	padding: 1.5rem 0;
+	border-right: 1px solid var(--grey);
+}
+.indicator li {
+	display: flex;
+	align-items: center;
+	grid-gap: .5rem;
+	padding: 10px 2rem;
+	cursor: pointer;
+	font-size: .875rem;
+	color: var(--black);
+	border-right: 3px solid transparent;
+}
+.indicator li i {
+	font-size: 1rem;
+}
+.indicator li:hover {
+	background: var(--light-blue);
+}
+.indicator li.active {
+	border-right-color: var(--blue);
+	color: var(--blue);
+	background: var(--light-blue);
+}
+.content {
+	padding: 1.5rem 2rem;
+}
+.content li {
+	display: none;
+}
+.content li.active {
+	display: block;
+}
+.content li h1 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--black);
+	margin-bottom: .75rem;
+}
+.content li p {
+	margin-bottom: .5rem;
+	color: var(--dark-grey);
+	font-size: .875rem;
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+	.wrapper {
+		flex-direction: column;
+	}
+	.indicator {
+		border-right: none;
+	}
+}
+</style>
+<body>
+
+	<div class="container">
+		<div class="wrapper">
+			<ul class="indicator">
+				<li class="active" data-target="#home"><i class="ph-house"></i> Home</li>
+				<li data-target="#profile"><i class="ph-user-circle"></i> Profile</li>
+				<li data-target="#contact"><i class="ph-phone"></i> Contact</li>
+				<li data-target="#settings"><i class="ph-gear-six"></i> Settings</li>
+			</ul>
+			<ul class="content">
+				<li class="active" id="home">
+					<h1>Home</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
+					<p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. A deserunt fugiat, consequatur tenetur earum doloribus amet repellat quae illum dolore laborum voluptatum, autem, praesentium sunt soluta natus. Voluptates, quas tenetur.</p>
+					<p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus velit alias facere ducimus quidem tenetur facilis cum architecto exercitationem ratione suscipit vel dignissimos totam qui ex error cupiditate rem, ipsa, quam magnam veniam inventore. Porro iure, nobis officia similique minima eaque obcaecati eos magnam, nisi quos aut, ipsam recusandae laudantium!</p>
+				</li>
+				<li id="profile">
+					<h1>Profile</h1>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem esse perspiciatis inventore. Modi, nostrum debitis eum placeat suscipit veniam adipisci explicabo est natus, doloribus reprehenderit dolor maiores ut asperiores quam voluptas iure a doloremque vel odio ipsam molestias nihil blanditiis nam, in. Soluta doloribus iste repellendus quos hic itaque eaque.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
+				</li>
+				<li id="contact">
+					<h1>Contact</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum explicabo magni facere quo voluptas error, nulla nihil maxime fugiat earum iure fugit quas eligendi harum accusantium esse libero totam eveniet reprehenderit dignissimos ex, eius, voluptate! A maxime ad nostrum voluptatem, placeat, assumenda fugiat? Accusamus fuga repellendus nisi qui.</p>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur optio in pariatur ab officiis aperiam harum veritatis adipisci eveniet fuga soluta voluptas minima a necessitatibus, blanditiis.</p>
+				</li>
+				<li id="settings">
+					<h1>Settings</h1>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Velit quaerat magnam sit, nobis sed cum eius voluptatem quis facilis sunt, quia? Non atque, facere obcaecati veniam! Impedit atque, facilis similique doloribus quidem quibusdam quod! Quam odit quasi quia accusantium natus eos accusamus sequi repellat modi reiciendis vitae provident tenetur sint tempora quaerat expedita facere, assumenda quos consequatur minima quod deleniti.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sapiente.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+   
+</body>
+</html> 
