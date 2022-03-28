@@ -1,5 +1,4 @@
-( function( global, factory )
- {
+
 const allIndicator = document.querySelectorAll('.indicator li');
 const allContent = document.querySelectorAll('.content li');
 
@@ -19,4 +18,3 @@ allIndicator.forEach(item=> {
     this.classList.add('active');
   })
 })
-}
